@@ -13,4 +13,5 @@ app.use(router.allowedMethods());
 app.addEventListener("listen", (_e) =>
   console.log("Listening on http://localhost:8000")
 );
-await app.listen({ port: 8000 });
+
+export default app;

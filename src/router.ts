@@ -1,11 +1,8 @@
 import { Router } from "oak";
+import IndexController from "./controllers/index_controller.ts";
 
 const router = new Router();
 
-router.get("/", (ctx) => {
-  ctx.response.body = {
-    message: "Hello world!",
-  };
-});
+IndexController(router);
 
 export default router;
