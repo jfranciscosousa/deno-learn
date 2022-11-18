@@ -1,9 +1,9 @@
-import appRouter from "../router.ts";
+import { Router } from "oak";
 
-export default function IndexController(router: typeof appRouter) {
-  router.get("/", (ctx) => {
-    ctx.response.body = {
-      message: "Hello world!",
-    };
-  });
-}
+const IndexController = new Router().get("/", (ctx) => {
+  ctx.response.body = {
+    message: "Hello world!",
+  };
+});
+
+export default IndexController;
